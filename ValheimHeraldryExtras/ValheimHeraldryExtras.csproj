@@ -44,6 +44,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Built in Unity: Assets > Build Heraldry Extras Bundle -->
+    <EmbeddedResource Include="AssetBundles\heraldryextras" LogicalName="ValheimHeraldryExtras.heraldryextras" Condition="Exists('AssetBundles\heraldryextras')" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="JotunnLib" Version="2.30.2" />
   </ItemGroup>
 

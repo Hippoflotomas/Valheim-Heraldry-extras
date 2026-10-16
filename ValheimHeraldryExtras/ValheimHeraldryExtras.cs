@@ -2,6 +2,7 @@ using BepInEx;
 using Jotunn.Entities;
 using Jotunn.Managers;
 using Jotunn.Utils;
+using ValheimHeraldryExtras.Pieces;
 
 namespace ValheimHeraldryExtras
 {
@@ -28,6 +29,9 @@ namespace ValheimHeraldryExtras
         /// <summary>Prefix for every name another mod could see or collide with.</summary>
         public const string Prefix = "ValheimHeraldryExtras_";
 
+        /// <summary>The main mod's hammer tab. Jötunn makes tabs by name, so both mods share it; without the main mod it still exists.</summary>
+        public const string HammerCategory = "Heraldry";
+
         public static CustomLocalization Localization = LocalizationManager.Instance.GetLocalization();
 
         public static bool HeraldryModLoaded { get; private set; }
@@ -38,6 +42,16 @@ namespace ValheimHeraldryExtras
             Jotunn.Logger.LogInfo(HeraldryModLoaded
                 ? "Valheim Heraldry Mod found: pieces will be paintable."
                 : "Valheim Heraldry Mod not found: pieces will be plain.");
+
+            ExtrasConfig.Bind(Config);
+            PrefabManager.OnVanillaPrefabsAvailable += RegisterPieces;
+        }
+
+        private static void RegisterPieces()
+        {
+            // Fires every time the main menu loads; Jötunn keeps our pieces alive, so register once.
+            PrefabManager.OnVanillaPrefabsAvailable -= RegisterPieces;
+            MartialDisplay.Register();
         }
     }
 }
