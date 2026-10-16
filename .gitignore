@@ -373,3 +373,5 @@ Environment.props
 
 # not the generated dll for thunderstore
 */Package/plugins/*
+# files Claude moved out for Hippo to delete
+_to_delete/

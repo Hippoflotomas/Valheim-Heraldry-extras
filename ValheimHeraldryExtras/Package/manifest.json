@@ -1,0 +1,10 @@
+{
+  "name": "ValheimHeraldryExtras",
+  "description": "Extra paintable pieces for Valheim Heraldry Mod: wall shields, big banners and more.",
+  "version_number": "0.0.1",
+  "website_url": "https://github.com/Hippoflotomas/Valheim-Heraldry-extras",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2333",
+    "ValheimModding-Jotunn-2.30.2"
+  ]
+}
