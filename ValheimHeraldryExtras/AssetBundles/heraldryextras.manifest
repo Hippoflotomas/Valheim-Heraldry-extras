@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
 UnityVersion: 6000.0.75f1
-CRC: 799966940
+CRC: 3275889511
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 66e05779505860aae5ca3f351e4b3ac8
+    Hash: 032a82318f65f8ce73ebd75ce80df75e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: d09b92296f2caa0222796a41c2defd69
+    Hash: 3219c50854ff2a782d7e36576b5dbf5b
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: dbce3edc0704e3675fa616d36b1bebad
+    Hash: e6e553af0eb6ad1a5d3782947754f001
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,6 +21,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 23
   Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
 - Class: 33
   Script: {instanceID: 0}
 - Class: 43
@@ -30,4 +32,5 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Prefabs/MartialDisplay.prefab
+- Assets/Textures/ClothNormal.png
 Dependencies: []
